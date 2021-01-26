@@ -1,6 +1,6 @@
-import 'package:boilerplate_flutter_web/constants/constants.dart';
-import 'package:boilerplate_flutter_web/theme/theme.dart';
-import 'package:boilerplate_flutter_web/widgets/widgets.dart';
+import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/theme/theme.dart';
+import 'package:boilerplate_flutter_admin_page/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 

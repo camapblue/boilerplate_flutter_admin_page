@@ -1,4 +1,4 @@
-import 'package:boilerplate_flutter_web/theme/theme_constants.dart';
+import 'package:boilerplate_flutter_admin_page/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerHeader extends StatelessWidget {

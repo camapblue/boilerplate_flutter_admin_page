@@ -17,7 +17,7 @@ dependencies:
   repository:
     path: ../repository
   meta: ^1.2.3
-  boilerplate_flutter_web:
+  boilerplate_flutter_admin_page:
     path: ../
 
 dev_dependencies:

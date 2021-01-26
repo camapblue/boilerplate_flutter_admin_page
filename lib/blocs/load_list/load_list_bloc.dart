@@ -1,10 +1,10 @@
-import 'package:boilerplate_flutter_web/blocs/blocs.dart';
-import 'package:boilerplate_flutter_web/models/models.dart';
+import 'package:boilerplate_flutter_admin_page/blocs/blocs.dart';
+import 'package:boilerplate_flutter_admin_page/models/models.dart';
 import 'package:flutter/foundation.dart';
-import 'package:boilerplate_flutter_web/services/services.dart';
+import 'package:boilerplate_flutter_admin_page/services/services.dart';
 import 'package:flutter/material.dart';
 
-import 'package:boilerplate_flutter_web/blocs/base/base_bloc.dart';
+import 'package:boilerplate_flutter_admin_page/blocs/base/base_bloc.dart';
 import 'package:repository/model/model.dart';
 import 'package:repository/repository.dart';
 

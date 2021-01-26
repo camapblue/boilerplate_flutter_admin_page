@@ -1,4 +1,4 @@
-# boilerplate_flutter_web
+# boilerplate_flutter_admin_page
 
 A new Flutter project.
 

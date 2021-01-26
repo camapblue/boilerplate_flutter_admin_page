@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 import 'connectivity.dart';
-import 'package:boilerplate_flutter_web/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/foundation.dart';
 
-import 'package:boilerplate_flutter_web/blocs/blocs.dart';
+import 'package:boilerplate_flutter_admin_page/blocs/blocs.dart';
 
 
 typedef CheckingInternet = Future<List<InternetAddress>> Function(String host,

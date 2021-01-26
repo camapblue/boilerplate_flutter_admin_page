@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:boilerplate_flutter_web/constants/constants.dart';
-import 'package:boilerplate_flutter_web/theme/theme.dart';
+import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/theme/theme.dart';
 
 export 'ink_well_button.dart';
 

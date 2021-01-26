@@ -1,4 +1,4 @@
-import 'package:boilerplate_flutter_web/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 

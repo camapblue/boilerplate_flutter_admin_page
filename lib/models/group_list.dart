@@ -1,4 +1,4 @@
-import 'package:boilerplate_flutter_web/models/models.dart';
+import 'package:boilerplate_flutter_admin_page/models/models.dart';
 import 'package:repository/model/model.dart';
 
 extension GroupList on List<Group> {

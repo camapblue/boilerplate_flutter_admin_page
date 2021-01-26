@@ -1,4 +1,4 @@
-import 'package:boilerplate_flutter_web/theme/theme.dart';
+import 'package:boilerplate_flutter_admin_page/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class InkWellButton extends StatelessWidget {

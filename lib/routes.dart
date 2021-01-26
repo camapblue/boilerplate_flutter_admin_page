@@ -1,6 +1,6 @@
-import 'package:boilerplate_flutter_web/constants/constants.dart';
-import 'package:boilerplate_flutter_web/modules/home/home_view.dart';
-import 'package:boilerplate_flutter_web/modules/league/league_view.dart';
+import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/modules/home/home_view.dart';
+import 'package:boilerplate_flutter_admin_page/modules/league/league_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes {

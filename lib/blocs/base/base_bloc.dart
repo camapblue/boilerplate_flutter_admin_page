@@ -2,8 +2,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:bloc/bloc.dart';
 
-import 'package:boilerplate_flutter_web/constants/constants.dart';
-import 'package:boilerplate_flutter_web/blocs/blocs.dart';
+import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/blocs/blocs.dart';
 
 import 'broadcast.dart';
 import 'event_bus.dart';

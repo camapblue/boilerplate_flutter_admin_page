@@ -1,9 +1,9 @@
-import 'package:boilerplate_flutter_web/modules/base/layout_template.dart';
+import 'package:boilerplate_flutter_admin_page/modules/base/layout_template.dart';
 import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:boilerplate_flutter_web/theme/theme.dart';
+import 'package:boilerplate_flutter_admin_page/theme/theme.dart';
 import 'blocs/blocs.dart';
 
 Future<void> main() async {

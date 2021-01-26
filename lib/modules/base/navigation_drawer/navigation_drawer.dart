@@ -1,4 +1,4 @@
-import 'package:boilerplate_flutter_web/modules/base/navigation_drawer/navigation_drawer_header.dart';
+import 'package:boilerplate_flutter_admin_page/modules/base/navigation_drawer/navigation_drawer_header.dart';
 import 'package:flutter/material.dart';
 
 import 'drawer_item.dart';
