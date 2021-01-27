@@ -4,6 +4,7 @@ setup-env:
 	# yarn
 	echo "Start setup Environment"
 	cp ./environments/$(ENV)/.env .env
+	cp ./environments/$(ENV)/firebase.js ./web/firebase.js
 
 deploy:
 	make setup-env

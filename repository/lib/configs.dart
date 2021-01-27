@@ -27,4 +27,7 @@ class Configs {
   dynamic _configs;
 
   String get baseURL => _configs['BASE_URL'] ?? 'https://default.com/';
+
+  String get cloudFunctionsEmulatorHost =>
+      _configs['FIREBASE_CLOUD_FUNCTIONS_EMULATOR_HOST'] ?? '';
 }

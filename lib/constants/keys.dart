@@ -18,4 +18,8 @@ class _Blocs {
   final Key forceToDisposeBloc = const Key('force_to_dispose_bloc');
 
   final Key connectivityBloc = const Key('connectivity_bloc');
+  final Key showMessageBloc = const Key('show_message_bloc');
+  final Key sessionBloc = const Key('session_bloc');
+  final Key loaderBloc = const Key('loader_bloc');
+  final Key authenticationBloc = const Key('authentication_bloc');
 }

@@ -51,7 +51,7 @@ class EventBus {
     } catch (e) {
       log.error('Error in new instance of bloc $key: $e');
     }
-    throw Exception('Something went wrong in creating bloc $T');
+    throw Exception('Missing declare bloc constructor for $T');
   }
 
   T newBlocWithConstructor<T extends BaseBloc>(Key key, Function constructor) {
@@ -75,7 +75,7 @@ class EventBus {
     } catch (e) {
       log.error('Error in new instance of bloc $key: $e');
     }
-    throw Exception('Something went wrong in creating bloc with key $key');
+    throw Exception('Missing declare bloc constructor for $T');
   }
 
   T blocFromKey<T extends BaseBloc>(Key key) {

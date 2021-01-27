@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "ciphersignal-1274",
-    "dev": "ciphersignal-1274"
+    "default": "boilerplate-flutter-admin-page",
+    "dev": "boilerplate-flutter-admin-page"
   }
 }

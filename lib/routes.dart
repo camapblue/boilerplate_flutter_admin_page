@@ -1,23 +1,41 @@
+import 'package:boilerplate_flutter_admin_page/blocs/blocs.dart';
 import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
+import 'package:boilerplate_flutter_admin_page/modules/base/layout_template.dart';
 import 'package:boilerplate_flutter_admin_page/modules/home/home_view.dart';
 import 'package:boilerplate_flutter_admin_page/modules/league/league_view.dart';
+import 'package:boilerplate_flutter_admin_page/modules/log_in/log_in_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'modules/splash_screen/splash_screen_page.dart';
 
 class Routes {
-  static Map<String, WidgetBuilder> allRoutes(BuildContext context) {
-    return {
-      Pages.home: (context) => const HomeView(),
-    };
+  static Route<dynamic> generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case Pages.splashScreen:
+        return _getPageRoute(const SplashScreenPage(), settings);
+      case Pages.logIn:
+        return _getPageRoute(
+            BlocProvider(
+              create: (_) => AuthenticationBloc.instance(),
+              child: const LogInPage(),
+            ),
+            settings);
+      case Pages.dashboard:
+        return _getPageRoute(const LayoutTemplate(), settings);
+      default:
+        return _getPageRoute(Text('Page ${settings.name} not found'), settings);
+    }
   }
 
-  static Route<dynamic> generateRoute(RouteSettings settings) {
+  static Route<dynamic> generateDashboardRoute(RouteSettings settings) {
     switch (settings.name) {
       case Pages.home:
         return _getPageRoute(const HomeView(), settings);
       case Pages.league:
         return _getPageRoute(const LeagueView(), settings);
       default:
-        return _getPageRoute(const HomeView(), settings);
+        return _getPageRoute(Text('Page ${settings.name} not found'), settings);
     }
   }
 

@@ -19,6 +19,7 @@ if [ ! -z "$env" ]; then
     ENV=$env make run
   fi
 else
-  flutter run -d web-server --web-port=1234
+  # flutter run -d web-server --web-port=1234
+  flutter run -d chrome
 fi
 

@@ -33,7 +33,7 @@ class LayoutTemplate extends StatelessWidget {
                         color: AppColors.light,
                         child: Navigator(
                           key: AppNavigator().navigatorKey,
-                          onGenerateRoute: Routes.generateRoute,
+                          onGenerateRoute: Routes.generateDashboardRoute,
                           initialRoute: Pages.home,
                         ),
                       ),

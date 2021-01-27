@@ -41,6 +41,8 @@ dependencies:
   loadmore: ^1.0.4
   responsive_builder: ^0.3.0
   scrollable_positioned_list: ^0.1.8
+  firebase_core: ^0.7.0
+  firebase_auth: ^0.20.0+1
 
 dev_dependencies:
   flutter_test:
