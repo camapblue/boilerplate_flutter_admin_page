@@ -48,6 +48,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
   Widget build(BuildContext context) {
     return Container(
       width: 200,
+      color: AppColors.whiteBroken,
       child: Column(
         children: [
           _NavigationRowItem(

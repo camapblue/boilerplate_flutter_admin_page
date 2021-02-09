@@ -15,5 +15,5 @@ deploy:
 run:
 	make setup-env
 	firebase use $(E NV)
-	flutter run --dart-define env=$$(echo $$(cat .env | tr '\n' '|')) -d chrome
+	flutter run --dart-define env=$$(echo $$(cat .env | tr '\n' '|')) -d web-server --web-port=1234
 	

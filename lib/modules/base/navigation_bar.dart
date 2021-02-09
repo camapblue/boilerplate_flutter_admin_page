@@ -13,7 +13,7 @@ class _NavigationBarMobile extends StatelessWidget {
     return Container(
       height: 64,
       padding: const EdgeInsets.symmetric(horizontal: 24),
-      color: AppColors.pink,
+      color: AppColors.whiteBroken,
       child: Row(
         children: <Widget>[
           InkWellButton(
@@ -40,7 +40,7 @@ class _NavigationBarTabletDesktop extends StatelessWidget {
     return Container(
       height: 100,
       padding: const EdgeInsets.symmetric(horizontal: 24),
-      color: AppColors.pink,
+      color: AppColors.whiteBroken,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
