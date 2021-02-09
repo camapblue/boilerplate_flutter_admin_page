@@ -1,44 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:boilerplate_flutter_admin_page/blocs/blocs.dart';
+import 'package:boilerplate_flutter_admin_page/constants/app_icons.dart';
 import 'package:boilerplate_flutter_admin_page/constants/constants.dart';
 import 'package:boilerplate_flutter_admin_page/theme/theme.dart';
 import 'package:boilerplate_flutter_admin_page/widgets/widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
-class _NavBarItem extends StatelessWidget {
-  final String title;
-  const _NavBarItem(
-    this.title, {
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(fontSize: 18),
-    );
-  }
-}
 
 class _NavigationBarMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 64,
-      color: greenColorLight,
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      color: AppColors.pink,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          InkWellButton(
+            onTap: () => Scaffold.of(context).openDrawer(),
+            child: const Icon(Icons.menu),
+          ),
+          const SizedBox(width: 24),
           SizedBox(
             height: 48,
             width: 64,
             child: AppImage(image: AppImagesAsset.logo),
-          ),
-          Text(
-            'Boilerplate',
-            style: Theme.of(context).primaryBold.copyWith(
-                  color: AppColors.dark,
-                ),
           ),
         ],
       ),
@@ -49,9 +35,12 @@ class _NavigationBarMobile extends StatelessWidget {
 class _NavigationBarTabletDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Container(
       height: 100,
-      color: greenColorLight,
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      color: AppColors.pink,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -62,22 +51,62 @@ class _NavigationBarTabletDesktop extends StatelessWidget {
                 width: 100,
                 child: AppImage(image: AppImagesAsset.logo),
               ),
-              Text(
-                'Boilerplate',
-                style: Theme.of(context).primaryBold.copyWith(
-                      color: AppColors.dark,
-                    ),
-              ),
             ],
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
-            children: const <Widget>[
-              _NavBarItem('Episodes'),
-              SizedBox(
-                width: 60,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AppImage(
+                    image: AppImagesAsset.logo,
+                    width: 50,
+                    height: 50,
+                  ),
+                  Text(
+                    EventBus().user.email,
+                    style: theme.primaryRegular.copyWith(
+                      fontSize: 12,
+                      color: AppColors.dark,
+                    ),
+                  ),
+                ],
               ),
-              _NavBarItem('About'),
+              const SizedBox(width: 24),
+              BlocListener<SessionBloc, SessionState>(
+                condition: (_, state) => state is SessionSignOutSuccess,
+                listener: (_, state) {
+                  if (state is SessionSignOutSuccess) {
+                    Navigator.of(context)
+                        .pushReplacementNamed(Pages.splashScreen);
+                  }
+                },
+                child: InkWellButton(
+                  onTap: () => EventBus().event<SessionBloc>(
+                    Keys.Blocs.sessionBloc,
+                    SessionUserSignedOut(),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      AppIcon(
+                        icon: AppIcons.logout,
+                        width: 50,
+                        height: 50,
+                        color: AppColors.pink,
+                      ),
+                      Text(
+                        'Logout',
+                        style: theme.primaryRegular.copyWith(
+                          fontSize: 12,
+                          color: AppColors.dark,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           )
         ],

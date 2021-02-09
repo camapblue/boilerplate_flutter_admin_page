@@ -17,9 +17,9 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   void initState() {
     super.initState();
 
-    // WidgetsBinding.instance.addPostFrameCallback((_) async {
-    //   EventBus().event<SessionBloc>(Keys.Blocs.sessionBloc, SessionLoaded());
-    // });
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      EventBus().event<SessionBloc>(Keys.Blocs.sessionBloc, SessionLoaded());
+    });
   }
 
   @override

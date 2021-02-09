@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:common/common.dart';
+import 'package:repository/repository.dart';
 
 import '../blocs.dart';
 
@@ -158,4 +159,7 @@ class EventBus {
       return removedKeys.contains(b.blocKey);
     });
   }
+
+  User get user =>
+      blocFromKey<SessionBloc>(Keys.Blocs.sessionBloc)?.state?.user;
 }

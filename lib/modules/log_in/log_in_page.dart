@@ -54,6 +54,9 @@ class _LogInPageState extends State<LogInPage> {
                 width: 230,
                 height: 136,
               ),
+              const SizedBox(
+                height: 32,
+              ),
               ValidatorInput(
                 title: 'Email',
                 initialValue: _email,

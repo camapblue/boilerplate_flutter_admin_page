@@ -8,7 +8,7 @@ import 'package:boilerplate_flutter_admin_page/services/services.dart';
 class UserServiceImpl implements UserService {
   final FirebaseAuthService firebaseAuthService;
   final UserRepository userRepository;
-  
+
   const UserServiceImpl({
     @required this.firebaseAuthService,
     @required this.userRepository,
@@ -30,7 +30,7 @@ class UserServiceImpl implements UserService {
 
   @override
   Future<User> get user async {
-    return userRepository.me;
+    return await firebaseAuthService.isLoggedIn() ? userRepository.me : null;
   }
 
   @override

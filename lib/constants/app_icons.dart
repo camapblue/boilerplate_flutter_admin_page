@@ -7,7 +7,7 @@ enum AppIcons {
 
 const _AppIconsAsset = {
   AppIcons.close_circle: 'assets/assets/icons/close_circle.svg',
-  AppIcons.logout: 'assets/assets/icons/logout.svg',
+  AppIcons.logout: 'assets/assets/icons/error.svg',
   AppIcons.error: 'assets/assets/icons/error.svg',
   AppIcons.empty: 'assets/assets/icons/empty.svg',
 };

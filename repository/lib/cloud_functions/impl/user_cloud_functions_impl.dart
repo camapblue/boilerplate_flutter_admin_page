@@ -8,8 +8,14 @@ class UserCloudFunctionsImpl extends BaseCloudFunctions
 
   @override
   Future<User> get me async {
-      final json = await call('admin-api-user-me');
+    // final json = await call('admin-api-user-me');
 
-      return User.fromJson(json['user']);
+    // return User.fromJson(json['user']);
+
+    return User(
+      id: 'admin_id',
+      name: 'Admin',
+      email: 'admin@tester.com',
+    );
   }
 }
