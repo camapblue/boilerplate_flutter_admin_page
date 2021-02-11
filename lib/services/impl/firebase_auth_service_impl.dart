@@ -14,9 +14,4 @@ class FirebaseAuthServiceImpl implements FirebaseAuthService {
 
   @override
   Future<void> signOut() => FirebaseAuth.instance.signOut();
-
-  @override
-  Future<bool> isLoggedIn() async {
-    return FirebaseAuth.instance.currentUser != null;
-  }
 }

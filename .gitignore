@@ -35,6 +35,7 @@ env.json
 /build/
 /coverage/
 /ios/Flutter/.last_build_id
+.fvm/
 
 # Web related
 lib/generated_plugin_registrant.dart

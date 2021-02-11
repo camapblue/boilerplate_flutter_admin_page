@@ -8,6 +8,4 @@ abstract class FirebaseAuthService {
   });
 
   Future<void> signOut();
-
-  Future<bool> isLoggedIn();
 }

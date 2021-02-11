@@ -30,7 +30,7 @@ class UserServiceImpl implements UserService {
 
   @override
   Future<User> get user async {
-    return await firebaseAuthService.isLoggedIn() ? userRepository.me : null;
+    return userRepository.isUserLoggedIn ? userRepository.me : null;
   }
 
   @override
